@@ -281,8 +281,9 @@ justify-content: center;
     height: 50px;
     width: 80px;
     cursor: pointer;
-    background-color: rgb(59,58,58);
+    background-color: rgb(58,58,58);
     color: white;
+    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -344,8 +345,6 @@ nav{
     background-position: center 40px;
     height: 30vh;
 }
-
-
     }
 
 
