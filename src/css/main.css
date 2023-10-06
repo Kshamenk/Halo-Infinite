@@ -275,8 +275,8 @@ display: flex;
 justify-content: center;
 }
 
-#videos #slider #controls .prev,
-#videos #slider #controls .next{
+#videos #slider #controls #prev,
+#videos #slider #controls #next{
     border: none;
     height: 50px;
     width: 80px;
@@ -291,15 +291,68 @@ justify-content: center;
     transition: all 0.3s ease;
 }
 
-#videos #slider #controls .prev:hover,
-#videos #slider #controls .next:hover{
+#videos #slider #controls #prev:hover,
+#videos #slider #controls #next:hover{
     background-color: rgb(37,37,37);
 }
 
 
+#videos #slider #current{
+    width: 1280px;
+    margin: 50px auto;
+    border: solid 1px #00c3ff
+}
+#videos #slider #videos-container{
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    justify-content:center;
+    overflow: auto;
+}
 
 
+#videos #slider #videos-container .item{
+    border: solid 1px #00c3ff;
+    cursor: pointer;
+    overflow: hidden;
 
+    min-width: 220px;
+    height: 180px;
+}
+
+#videos #slider #videos-container .item a{
+    position: relative;
+}
+
+#videos #slider #videos-container .item img{
+    object-fit: contain;
+    min-width: 320px;
+    height: 180px;
+    transition: opacity 0.3s ease;
+}
+#videos #slider #videos-container .item:hover img{
+    opacity: 0.6;
+    object-fit: contain;
+}
+#videos #slider #videos-container .item a::before{
+    content: ">";
+    color: white;
+    position: absolute;
+    display: block;
+    left: 135px;
+    top: -95px;
+    width: 50px;
+    height: 50px;
+    background-color: black;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}
+
+
+ 
 
 
 
@@ -308,16 +361,13 @@ justify-content: center;
 nav .link-hide{
     display: none;
 }
-
 nav .more{
     display: flex;
 }
-
 header{
     
     height: 70vh;
 }
-
 #banner{
     position: initial !important;
     z-index: 100;
