@@ -246,7 +246,7 @@ h2::before{
 }
 
 .green-link:hover::before{
-    transform: scaleX(0.9);
+    transform: scaleX(0.8);
 }
 
 /* VIDEOS */
@@ -254,6 +254,11 @@ h2::before{
 .w-75{
     width: 75%;
     margin: 0 auto;
+}
+
+h3 {
+    font-size: 1.6em;
+    padding-top: 50px 0;
 }
 
 
@@ -273,6 +278,7 @@ h2::before{
 #videos #slider #controls{
 display: flex;
 justify-content: center;
+scroll-behavior: smooth;
 }
 
 #videos #slider #controls #prev,
@@ -287,7 +293,7 @@ justify-content: center;
     display: flex;
     align-items: center;
     justify-content: center;
-
+    scroll-behavior: smooth;
     transition: all 0.3s ease;
 }
 
@@ -307,7 +313,8 @@ justify-content: center;
     gap: 10px;
     width: 100%;
     justify-content:center;
-    overflow: auto;
+    overflow: hidden;
+    scroll-behavior: smooth;
 }
 
 
@@ -316,7 +323,7 @@ justify-content: center;
     cursor: pointer;
     overflow: hidden;
 
-    min-width: 220px;
+    min-width:   320px;
     height: 180px;
 }
 
@@ -335,7 +342,9 @@ justify-content: center;
     object-fit: contain;
 }
 #videos #slider #videos-container .item a::before{
-    content: ">";
+    font-family: "Material Icons";
+    font-size: 24px;
+    content: "play_arrow";
     color: white;
     position: absolute;
     display: block;
@@ -353,13 +362,21 @@ justify-content: center;
 
 
  
+/* MULTIPLAYER */
 
+#multi-player{
+    height: 100vh;
+    background-image: url(/src/img/bg-multiplayer.jpeg);
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
 
 
 
 @media screen and (max-width:1191px){
 nav .link-hide{
-    display: none;
+    display: none ;
 }
 nav .more{
     display: flex;
@@ -372,6 +389,13 @@ header{
     position: initial !important;
     z-index: 100;
     width: 100%;
+}
+
+#slide #current {
+    width: 80% !important ;
+}
+#slide #current iframe {
+    height: 500px;
 }
 }
 
@@ -395,6 +419,20 @@ nav{
     background-position: center 40px;
     height: 30vh;
 }
-    }
 
+#slider #current {
+    width: 90%;
+}
+
+#slider #current iframe{
+
+    height: 300px;
+   }
+
+   #slider #videos-container{
+    display: none !important;
+   }
+ }
+
+    
 
