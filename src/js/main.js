@@ -7,6 +7,7 @@ const moreMenu = document.querySelector('.more .menu')
 bShowMobileLinks.addEventListener('click', (e) => {
     e.preventDefault()
     mobileMenu.classList.toggle('show')
+
 })
 
 moreOptions.addEventListener('click', (e) => {
@@ -35,7 +36,7 @@ const videos = [
 
 const sliderContainer = document.querySelector("#slider")
 const currentContainer = document.querySelector("#current")
-const videoContainer = document.querySelector("#videos-container")
+const videosContainer = document.querySelector("#videos-container")
 const bNext = document.querySelector("#next")
 const bPrev = document.querySelector("#prev")
 let current = 0;
@@ -68,14 +69,36 @@ function renderCurrentVideo(id){
 }
 
 function renderVideos(){
-    const html = videos.map(video => {
+    const html = videos.map((video, index) => {
         return `<div class="item">
-            <a href="#">
+            <a href="#" data-id='${index}'>
             <img src="https://i3.ytimg.com/vi/${video.id}/mqdefault.jpg" />
             </a>
         </div>`;
     })
 
-    videoContainer.innerHTML = html.join("")
+    videosContainer.innerHTML = html.join("")
+
+    document.querySelectorAll('.item a').forEach((item) =>{
+        item.addEventListener("click", (e)=> {
+            e.preventDefault()
+            const id = +item.getAttribute('data-id')
+            current = id
+            renderCurrentVideo(videos[current].id)
+        
+        })
+    })
 }
+
+// function scrollToVideo() {
+//     const videoItem = item.parentElement;
+//     const index = Array.from(videosContainer.children).indexOf(videoItem);
+
+//     const scrollPosition = index * videoItem.offsetWidth;
+
+// videosContainer.scroll({
+//         left: scrollPosition,
+//         behavior: "smooth",
+//     });
+// }
 
