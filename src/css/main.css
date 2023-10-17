@@ -248,20 +248,16 @@ h2::before{
 .green-link:hover::before{
     transform: scaleX(0.8);
 }
-
 /* VIDEOS */
 
 .w-75{
     width: 75%;
     margin: 0 auto;
 }
-
 h3 {
     font-size: 1.6em;
     padding-top: 50px 0;
 }
-
-
 
 #videos{
     text-align: center;
@@ -274,13 +270,11 @@ h3 {
 
     color: white;
 }
-
 #videos #slider #controls{
 display: flex;
 justify-content: center;
 scroll-behavior: smooth;
 }
-
 #videos #slider #controls #prev,
 #videos #slider #controls #next{
     border: none;
@@ -296,12 +290,10 @@ scroll-behavior: smooth;
     scroll-behavior: smooth;
     transition: all 0.3s ease;
 }
-
 #videos #slider #controls #prev:hover,
 #videos #slider #controls #next:hover{
     background-color: rgb(37,37,37);
 }
-
 
 #videos #slider #current{
     width: 1280px;
@@ -316,7 +308,6 @@ scroll-behavior: smooth;
     overflow: hidden;
     scroll-behavior: smooth;
 }
-
 
 #videos #slider #videos-container .item{
     border: solid 1px #00c3ff;
@@ -359,11 +350,7 @@ scroll-behavior: smooth;
     justify-content: center;
     z-index: 100;
 }
-
-
- 
 /* MULTIPLAYER */
-
 #multi-player{
     height: 100vh;
     background-image: url(/src/img/bg-multiplayer.jpeg);
@@ -416,14 +403,21 @@ scroll-behavior: smooth;
     width: 500px;
 }
 
-
-
-
 #get-the-game .item-store .right{
     text-align: left;
     width: 80%;
 }
+ 
 
+
+
+footer{
+    height: 800px;
+
+    background-image: url(../img/master-chief-darkmode.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
 @media screen and (max-width:1519px){
 .info{
@@ -465,8 +459,20 @@ header{
 }
 
 #get-the-game .item-store{
-    display: flex;
-    flex-direction: column;
+    width: 100%;
+    padding: 20px;
+}
+
+#get-the-game .item-store .left img {
+    width: 300px;
+}
+
+#get-the-game .item-store .right {
+    width: 100%;
+}
+
+footer{
+    background-position: center center;
 }
 }
 
@@ -505,8 +511,29 @@ nav{
    .info{
     width: 90%;
     margin: 0 auto;
-
    }
+
+   #get-the-game .item-store{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 20px;
+   }
+
+   #get-the-game .item-store .left img{
+    width: 300px;
+   }
+
+   #get-the-game .item-store .right{
+    text-align: center;
+    width: 100%;
+   }
+
+footer{
+    height: 400px;
+    background-position: center center;
+}
+
  }
 
     
